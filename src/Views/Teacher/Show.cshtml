@@ -1,0 +1,24 @@
+@model Teacher
+
+<h1 class="margin-bottom-1">@($"{Model.FirstName} {Model.LastName}'s") Details</h1>
+
+<div class="flex-column">
+    <div class="flex-row margin-bottom-1">
+       <span class="margin-right-1 fw-bolder">Employee Number:</span> 
+       <span>@Model.EmployeeNumber</span> 
+    </div>
+    <div class="flex-row margin-bottom-1">
+       <span class="margin-right-1 fw-bolder">First Name:</span> 
+       <span>@Model.FirstName</span> 
+    </div>
+
+    <div class="flex-row margin-bottom-1">
+       <span class="margin-right-1 fw-bolder">Last Name:</span> 
+       <span>@Model.LastName</span> 
+    </div>
+
+    <div class="flex-row margin-bottom-1">
+       <span class="margin-right-1 fw-bolder">Salary:</span> 
+       <span>@Model.Salary</span> 
+    </div>
+</div>

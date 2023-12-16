@@ -1,0 +1,33 @@
+@model List<Teacher>
+<div class="container-60">
+   
+        <h3 class="margin-bottom-1">Teachers</h3>
+      
+        <table class="list">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th colspan="3">Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(Teacher teacher in Model)
+             {
+                <tr>
+                    <td>
+                        <div class="flex-row margin">
+                        <span class="margin-right-1">@teacher.FirstName</span>
+                        <span class="margin-right-2">@teacher.LastName</span>
+                    </div>
+                    </td>
+                    <td><a href="teacher/show?teacherid=@(teacher.Id)">Details</a></td>
+                    <td><a href="teacher/update?teacherid=@(teacher.Id)">Update</a></td>
+                </tr>
+             }
+            </tbody>
+        </table>
+             
+            
+      
+   
+</div>
